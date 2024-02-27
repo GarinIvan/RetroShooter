@@ -11,10 +11,10 @@ NavMeshProjectSettings:
     cost: 1
   - name: Jump
     cost: 2
-  - name: 
+  - name: Walkbale 2
     cost: 1
-  - name: 
-    cost: 1
+  - name: Walkbale 3
+    cost: 3
   - name: 
     cost: 1
   - name: 
