@@ -540,6 +540,7 @@ GameObject:
   - component: {fileID: 6251844839817518513}
   - component: {fileID: 1915412451679854074}
   - component: {fileID: 8926635758719421772}
+  - component: {fileID: 6664233878011434560}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -648,6 +649,22 @@ MonoBehaviour:
   gameplayUI: {fileID: 5024922166116813815}
   gameOverScreen: {fileID: 6318965961200673501}
   animator: {fileID: 1920973894706299481}
+--- !u!114 &6664233878011434560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6251844839817518510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55631265fdc54964b904afd57c86f68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: 1708996195491578848, guid: 9ba5ac5d3e2a6cf4da8c2b0d7bd77195,
+    type: 3}
+  granadeSourceTransform: {fileID: 3709080117599174710}
+  force: 400
 --- !u!1 &6251844840480256509
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,8 +972,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6500466063460263977}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 1.4, z: -0.05}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.4, z: 0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6251844839817518514}

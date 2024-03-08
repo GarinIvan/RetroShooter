@@ -28,6 +28,12 @@ public class PlayerHealth : MonoBehaviour
     {
         healthRectTransform.anchorMax = new Vector2(health / _maxHealth, 1);
     }
+    public void AddHealth(float amount)
+    {
+        health += amount;
+        health = Mathf.Clamp(health, 0, _maxHealth);
+        DrawHealthBar();
+    }
     private void PlayerIsDead()
     {
         gameplayUI.SetActive(false);
