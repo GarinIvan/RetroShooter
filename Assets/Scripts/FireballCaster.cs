@@ -6,7 +6,7 @@ public class FireballCaster : MonoBehaviour
 {
     public Fireball fireballPrefab;
     public Transform fireballSourceTransform;
-    public float startTime = 1;
+    public float startTime = 0.25f;
     private float _shootTime;
     void Start()
     {
@@ -20,5 +20,6 @@ public class FireballCaster : MonoBehaviour
             Instantiate(fireballPrefab, fireballSourceTransform.position, fireballSourceTransform.rotation);
             _shootTime = startTime;
         }
+        if (_shootTime <= 0) _shootTime = 0;
     }
 }

@@ -7,7 +7,7 @@ public class GrenageCaster : MonoBehaviour
     public Rigidbody grenadePrefab;
     public Transform granadeSourceTransform;
     public float force = 10;
-    public float startTime = 3;
+    public float startTime = 1;
     private float _shootTime;
     private void Start()
     {
@@ -24,5 +24,6 @@ public class GrenageCaster : MonoBehaviour
             grenade.GetComponent<Rigidbody>().AddForce(granadeSourceTransform.forward * force * 0.5f);
             grenade.GetComponent<Rigidbody>().AddForce(granadeSourceTransform.up * force);
         }
+        if (_shootTime <= 0) _shootTime = 0;
     }
 }

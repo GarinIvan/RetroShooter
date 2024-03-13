@@ -632,6 +632,7 @@ MonoBehaviour:
   fireballPrefab: {fileID: 606450333443550855, guid: d7d03a936810bab4a81eae0ebef194b5,
     type: 3}
   fireballSourceTransform: {fileID: 3709080117599174710}
+  startTime: 0.25
 --- !u!114 &8926635758719421772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,6 +666,7 @@ MonoBehaviour:
     type: 3}
   granadeSourceTransform: {fileID: 3709080117599174710}
   force: 400
+  startTime: 1
 --- !u!1 &6251844840480256509
 GameObject:
   m_ObjectHideFlags: 0
