@@ -40,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
         gameOverScreen.SetActive(true);
         GetComponent<PlayerController>().enabled = false;
         GetComponent<FireballCaster>().enabled = false;
+        GetComponent<GrenageCaster>().enabled = false;
         GetComponent<CameraRotation>().enabled = false;
         gameOverScreen.GetComponent<Animator>().SetTrigger("Show");
         animator.SetTrigger("Death");
