@@ -502,6 +502,21 @@ PrefabInstance:
       propertyPath: startTime
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 2173597792445992934, guid: 9ee7a42ddc3d44849bfd3e7a0ce60643,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174804830735042341, guid: 9ee7a42ddc3d44849bfd3e7a0ce60643,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495573485367906303, guid: 9ee7a42ddc3d44849bfd3e7a0ce60643,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6251844839817518510, guid: 9ee7a42ddc3d44849bfd3e7a0ce60643,
         type: 3}
       propertyPath: m_Name
@@ -2182,6 +2197,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   animator: {fileID: 1134670632}
+  explosionPrefab: {fileID: 992202415197200903, guid: ec7cfea0b80ef8b4f9ea7027e35b9487,
+    type: 3}
+  explosionParticle: {fileID: 4388947112716342, guid: e1b08032bec16ba4eb1ae23cbd572664,
+    type: 3}
+  playerProgress: {fileID: 0}
 --- !u!136 &1954399492
 CapsuleCollider:
   m_ObjectHideFlags: 0

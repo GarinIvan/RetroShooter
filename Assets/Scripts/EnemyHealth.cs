@@ -8,8 +8,15 @@ public class EnemyHealth : MonoBehaviour
     public float health = 100;
     public Animator animator;
     public Explosion explosionPrefab;
+    public Transform explosionParticle;
+    public PlayerProgress playerProgress;
+    private void Start()
+    {
+        playerProgress = FindObjectOfType<PlayerProgress>();
+    }
     public void DealDamage(float damage)
     {
+        playerProgress.AddExperience(damage);
         health -= damage;
         if (health <= 0)
         {
@@ -22,16 +29,18 @@ public class EnemyHealth : MonoBehaviour
     }
     private void EnemyDeath()
     {
+        Invoke("Explosion", 3);
         animator.SetTrigger("Death");
         GetComponent<EnemyAI>().enabled = false;
         GetComponent<NavMeshAgent>().enabled = false;
         GetComponent<CapsuleCollider>().enabled = false;
-        Invoke("Explosion", 3);
     }
     void Explosion()
     {
-        Instantiate(explosionPrefab);
-        explosionPrefab.transform.position = transform.position;
+        var explosion = Instantiate(explosionPrefab);
+        explosion.transform.position = transform.position;
+        var explosionPart = Instantiate(explosionParticle);
+        explosionPart.transform.position = transform.position;
         Destroy(gameObject);
     }
 }

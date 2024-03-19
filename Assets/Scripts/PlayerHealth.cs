@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public float health = 100;
-    public RectTransform healthRectTransform;
+    public Image healthRectTransform;
     private float _maxHealth;
     public GameObject gameplayUI;
     public GameObject gameOverScreen;
@@ -26,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
     }
     private void DrawHealthBar()
     {
-        healthRectTransform.anchorMax = new Vector2(health / _maxHealth, 1);
+        healthRectTransform.fillAmount = health/_maxHealth;
     }
     public void AddHealth(float amount)
     {
